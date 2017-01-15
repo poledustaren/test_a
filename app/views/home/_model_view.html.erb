@@ -1,0 +1,17 @@
+<div>
+  <%= label_tag entity.title %>
+  <br>
+   <%= cool_user_input(entity.text).html_safe %>
+  <br>
+
+  <% if entity.entity.count>0 %>
+      <% entity.entity.each do |sub_entity| %>
+          <%= render 'model_view', entity: sub_entity %>
+      <% end %>
+  <% end %>
+
+  <% url_path ="#{root_url}#{entity.url_path}/" %>
+  <%=link_to "go_to" ,"#{root_url}#{entity.url_path}"%>
+  <%=link_to "add" ,"#{url_path}add" %>
+  <%=link_to "edit" ,"#{url_path}edit" %>
+</div>

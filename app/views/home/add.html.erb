@@ -1,0 +1,18 @@
+<div>
+  <%= form_for @view_entity, url:"#{@view_entity.url_path}/add" do |f| %>
+      <%=f.hidden_field :order_number%>
+      <%=f.hidden_field :entity_id%>
+      <%=f.hidden_field :url_path%>
+      <br>
+      <%= f.label :name ,"name" %>
+      <%= f.text_field :name%>
+      <br>
+      <%= f.label :title, "title" %>
+      <%= f.text_field :title %>
+      <br>
+      <%= f.label :text, "text" %>
+      <%= f.text_field :text %>
+
+      <%= f.submit 'add' %>
+  <% end %>
+</div>
