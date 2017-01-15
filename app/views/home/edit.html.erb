@@ -6,13 +6,13 @@
       <%=f.hidden_field :url_path%>
       <br>
       <%= f.label :name ,"name" %>
-      <%= f.text_field :name%>
+      <%= f.text_field :name, :required => true%>
       <br>
       <%= f.label :title, "title" %>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, :required => true %>
       <br>
       <%= f.label :text, "text" %>
-      <%= f.text_field :text %>
+      <%= f.text_field :text, :required => true %>
 
       <%= f.submit 'edit' %>
   <% end %>
