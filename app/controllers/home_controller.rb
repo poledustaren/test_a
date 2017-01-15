@@ -22,7 +22,7 @@ class HomeController < ApplicationController
       render "home/add"
     else
       url_path = @entity.add_entity(params[:entity])
-      redirect_to "http://0.0.0.0:3000/#{url_path}"
+      redirect_to "#{root_url}#{url_path}"
     end
   end
 
@@ -32,7 +32,7 @@ class HomeController < ApplicationController
       render "home/edit"
     else
       url_path=@entity.edit_entity(params[:entity])
-      redirect_to "http://0.0.0.0:3000/#{url_path}"
+      redirect_to "#{root_url}#{url_path}"
     end
   end
 end
